@@ -9,28 +9,33 @@
   </head>
   <body>
 
+
+
 <div id="app">
+<div class="center-screen">
+  <h2 style="margin-bottom:20px"> Progress Bar with VueJS </h2>
+    <input style="margin-bottom:15px" class="inputStyle" type="number" v-model="num" min="0" max="100"/>
   
-   <input type="number" v-model="num" min="0" max="100"/>
- 
-    <div class="single-chart">
+      <div class="single-chart">
 
-      <svg viewBox="0 0 36 36" class="circular-chart blue">
-        <path class="circle-bg"
-          d="M18 2.0845
-            a 15.9155 15.9155 0 0 1 0 31.831
-            a 15.9155 15.9155 0 0 1 0 -31.831"
-        />
-        <path class="circle" :style="color"
-          :stroke-dasharray="calculatedPercent"
-          d="M18 2.0845
-            a 15.9155 15.9155 0 0 1 0 31.831
-            a 15.9155 15.9155 0 0 1 0 -31.831"
-        />
+        <svg viewBox="0 0 36 36" class="circular-chart blue">
+          <path class="circle-bg"
+            d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+          />
+          <path class="circle" :style="color"
+            :stroke-dasharray="calculatedPercent"
+            d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+          />
 
-        <text x="18" y="20.35" class="percentage">{{num}}%</text>
-        
-    </svg>
+          <text x="18" y="20.35" class="percentage">{{num}}%</text>
+          
+      </svg>
+
+  </div>
 
 </div>
 
